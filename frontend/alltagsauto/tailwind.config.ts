@@ -17,7 +17,7 @@ const config: Config = {
           'auto3': 'url("https://images.pexels.com/photos/230802/pexels-photo-230802.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
         },
         colors: {
-          primary: '#222831',
+          // primary: '#222831',
           secondary: '#008A90',
           customWhite: '#FAFAFA',
           tertiary: '#C66912'
