@@ -17,13 +17,22 @@ export default function Home() {
       </div>
         </div>
 
-      <div className="p-10">
+      <div className="p-10 flex flex-col gap-4">
         <h2 className="font-bold text-4xl">
           Willkomen bei Alltagsauto-Exclusive
         </h2>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed reprehenderit aut animi perferendis? Provident, assumenda eius deserunt nisi velit commodi itaque corrupti quisquam nulla hic possimus libero aliquid impedit maiores reprehenderit quidem animi maxime fuga dolorum nesciunt labore officia. Aliquid excepturi velit vitae qui, deserunt unde atque esse laudantium modi consectetur cumque quam ipsam ab voluptatibus eos eaque tempora dolorem natus nostrum ad placeat repellat. Aut porro iste et ad officia hic, quam magnam? Eligendi culpa alias accusamus non reprehenderit fugiat! Sunt est expedita voluptas incidunt iusto perspiciatis veritatis facere, voluptatibus saepe, quod dolor repellat mollitia ut vel necessitatibus dolorum, facilis eaque. Cumque adipisci eveniet placeat tenetur? Saepe eveniet omnis facere! Nisi delectus at porro eum, aliquam temporibus magnam! Adipisci, laudantium facere! Consequatur, voluptatem rem? Necessitatibus facere, sequi placeat autem deserunt dolores itaque alias quas, nam architecto enim debitis ipsa vero, quaerat odio est ratione. Laudantium distinctio dignissimos nulla molestias.</p>
+       
+
+        <p> Willkommen bei Alltagsauto-Exclusive! Wir sind ein führendes Schweizer Unternehmen, das sich auf die Vermietung von Luxusfahrzeugen spezialisiert hat. Unsere Flotte besteht aus den neuesten Modellen der renommiertesten Automarken weltweit. Unser Ziel ist es, unseren Kunden ein unvergessliches Fahrerlebnis zu bieten, egal ob für geschäftliche oder private Zwecke. Mit einem besonderen Fokus auf Qualität und Kundenzufriedenheit stellen wir sicher, dass jedes Fahrzeug perfekt gewartet und bereit für jede Reise ist. Unser professionelles Team steht Ihnen jederzeit zur Verfügung, um alle Ihre Wünsche zu erfüllen. Erleben Sie den Luxus und die Eleganz eines erstklassigen Fahrzeugs und genießen Sie den besten Service, den die Branche zu bieten hat. Vertrauen Sie Alltagsauto-Exclusive und machen Sie jede Fahrt zu einem besonderen Erlebnis. Ihre Zufriedenheit ist unser oberstes Gebot.</p>
       </div>
+        
     
+      <div className=' bg-auto2 min-h-screen bg-center bg-no-repeat bg-cover bg-fixed'>
+
+      </div>
+      <div className='bg-auto3 min-h-screen bg-no-repeat bg-cover bg-fixed'>
+
+      </div>
       
     </div>
   );
