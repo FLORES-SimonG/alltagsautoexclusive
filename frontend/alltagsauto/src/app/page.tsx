@@ -47,7 +47,7 @@ export default function Home() {
       <div className=" bg-auto2 min-h-screen bg-center bg-no-repeat bg-cover bg-fixed"></div>
       <div className="bg-auto3 min-h-screen bg-no-repeat bg-cover bg-fixed bg-center"></div>
 
-      <div className="min-h-screen  items-center justify-center  p-10 flex flex-col gap-4 bg-gray-600  text-customWhite h-screen ">
+      <div className="min-h-screen  items-center justify-center p-4  lg:p-10 flex  gap-4 bg-gray-600  text-customWhite h-full ">
         <CommentCarousel />
       </div>
     <div >
