@@ -8,14 +8,14 @@ export default function Home() {
   return (
     <div>
       <div className="min-h-screen flex flex-col justify-center items-center bg-fixed bg-auto bg-no-repeat bg-cover">
-        <div className="bg-black/10 flex flex-col gap-8 p-5 items-center  rounded">
+        <div className="bg-black/10 flex flex-col gap-8 p-5 items-center rounded w-full">
           <Image
             src="/alltagsAutoExclusive.svg"
             alt="logo"
             width={600}
             height={400}
           />
-          <div className="flex flex-row gap-4">
+          <div className="flex flex-row gap-4 w-full">
             <ButtonPrimary title="Suchen" size="lg" />
             <ButtonPrimary title="Vermieten" size="lg" color="transparent" />
           </div>
