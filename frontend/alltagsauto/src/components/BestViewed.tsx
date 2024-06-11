@@ -17,6 +17,7 @@ export default function BestViewed() {
           if (index < 2) {
             return (
               <CardProduct
+              key={car.id}
                 image={car.mainImage}
                 price={car.pricePerDayCHF}
                 transmission={car.transmission}

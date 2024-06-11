@@ -1,5 +1,6 @@
 const sportsCars = [
     {
+      id: 1,
       name: "Ferrari 488 Spider",
       brand: "Ferrari",
       kilometersDriven: 15000,
@@ -19,6 +20,7 @@ const sportsCars = [
       clicks: 250
     },
     {
+      id: 2,
       name: "Lamborghini Huracán",
       brand: "Lamborghini",
       kilometersDriven: 8000,
@@ -37,6 +39,7 @@ const sportsCars = [
       clicks: 300
     },
     {
+      id: 3,
       name: "Porsche 911 Carrera",
       brand: "Porsche",
       kilometersDriven: 20000,
