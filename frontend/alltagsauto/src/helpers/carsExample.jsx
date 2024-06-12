@@ -183,7 +183,16 @@ const sportsCars = [
     //   ],
     //   clicks: 190
     // }
-  ];
-  
+  ];export function sortedCarsById(cars) {
+    // Crea una copia de la matriz y luego la ordena
+    const sortedCars = [...cars].sort((a, b) => a.id - b.id);
+    return sortedCars;
+  }
+  export function sortedCarsByClicks(cars) {
+    // Crea una copia de la matriz y luego la ordena
+    const sortedCars = [...cars].sort((a, b) => b.clicks - a.clicks);
+    return sortedCars;
+  }
+
   export default sportsCars;
   
