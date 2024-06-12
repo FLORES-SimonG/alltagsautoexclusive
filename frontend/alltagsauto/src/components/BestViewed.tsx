@@ -1,10 +1,11 @@
 import carsExample from "@/helpers/carsExample";
 import { Card } from "flowbite-react";
 import Image from "next/image";
-import CardProduct from "./cardProduct";
+import CardProduct from "./CardProduct";
+// import CardProduct from "./ardProduct";
 
 export default function BestViewed() {
-  console.log(carsExample);
+  // console.log(carsExample);
 
   return (
     <div className=" h-3/4  items-center justify-center  p-10 flex flex-row lg:gap-4 gap-10 bg-gray-700 flex-wrap  lg:flex-nowrap ">
