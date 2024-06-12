@@ -27,7 +27,7 @@ export default function CardProduct({ image, price, transmission, fuelType, name
         <div className="mt-2">
           <dl>
             <div>
-              <dt className="sr-only">Location</dt>
+              <dt className="sr-only">Location.</dt>
 
               <dd className="text-sm text-gray-500">{location}</dd>
             </div>
