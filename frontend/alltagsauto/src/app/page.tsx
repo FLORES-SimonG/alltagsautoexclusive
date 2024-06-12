@@ -1,5 +1,6 @@
 import BestViewed from "@/components/BestViewed";
 import CommentCarousel from "@/components/ComentarCarrousel";
+import LatestCars from "@/components/LatestCars";
 import ButtonPrimary from "@/components/buttons/ButtonPrimary";
 import Image from "next/image";
 
@@ -53,6 +54,9 @@ export default function Home() {
     <div >
 
       <BestViewed />
+    </div>
+    <div>
+      <LatestCars />
     </div>
 
     </div>
