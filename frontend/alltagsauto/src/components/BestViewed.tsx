@@ -1,7 +1,7 @@
 import carsExample, { sortedCarsByClicks } from "@/helpers/carsExample";
 import { Card } from "flowbite-react";
 import Image from "next/image";
-// import CardProduct from "./CardProduct";
+import CardProduct from "./CardProduct";
 // import {sortedCarsById} from "@/helpers/carsExample";
 
 
@@ -15,7 +15,7 @@ export default function BestViewed() {
         <h2 className="font-bold text-4xl ">Am häufigsten angesehen</h2>
         <p>Sie sind möglicherweise am gefragtesten.</p>
       </div>
-      {/* <div className="lg:w-2/3  flex flex-row justify-center gap-10 flex-wrap ">
+      <div className="lg:w-2/3  flex flex-row justify-center gap-10 flex-wrap ">
         {sortedCarsClick.map((car, index) => {
           if (index < 2) {
             return (
@@ -31,7 +31,7 @@ export default function BestViewed() {
             );
           }
         })}
-      </div> */}
+      </div>
     </div>
   );
 }
