@@ -3,6 +3,7 @@ import { Card } from "flowbite-react";
 import Image from "next/image";
 import CardProduct from "./cardProduct";
 
+
 export default function BestViewed() {
   console.log(carsExample);
 
