@@ -4,25 +4,34 @@ import { BsFillFuelPumpFill } from "react-icons/bs";
 import Image from "next/image";
 
 interface CardProductProps {
-    image: string;
-    price: number;
-    transmission: string;
-    fuelType: string;
-    location: string;
-    name: string;
-    }
+  image: string;
+  price: number;
+  transmission: string;
+  fuelType: string;
+  location: string;
+  name: string;
+}
 
-
-export default function CardProduct({ image, price, transmission, fuelType, name,location }: CardProductProps) {
+export default function CardProduct({
+  image,
+  price,
+  transmission,
+  fuelType,
+  name,
+  location,
+}: CardProductProps) {
   return (
     <div>
-      <a href="#" className="block rounded-lg p-4 shadow-sm shadow-indigo-100 bg-white">
+      <a
+        href="#"
+        className="block rounded-lg p-4 shadow-sm shadow-indigo-100 bg-white w-80 lg:w-96"
+      >
         <Image
           alt={name}
           src={image}
           width={384}
-            height={384}
-            // className=" rounded-xl"
+          height={384}
+          // className=" rounded-xl"
           className="h-56 w-full rounded-md object-cover"
         />
 
@@ -41,32 +50,32 @@ export default function CardProduct({ image, price, transmission, fuelType, name
             </div>
           </dl>
 
-          <div className="mt-6 flex items-center gap-8 text-xs">
+          <div className="mt-6 flex items-center gap-8 text-xs flex-row justify-center ">
             <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
-            <BsFillFuelPumpFill  className="text-indigo-700 h-4 w-4" />
+              <BsFillFuelPumpFill className="text-indigo-700 h-4 w-4" />
 
               <div className="mt-1.5 sm:mt-0">
-                <p className="text-gray-500">Fuel type</p>
+                <p className="text-gray-500">Kraftstoff</p>
 
                 <p className="font-medium">{fuelType}</p>
               </div>
             </div>
 
             <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
-            <FaCar className=" text-indigo-700 h-4 w-4" />
+              <FaCar className=" text-indigo-700 h-4 w-4" />
 
               <div className="mt-1.5 sm:mt-0">
-                <p className="text-gray-500">Transmission</p>
+                <p className="text-gray-500">Getriebe</p>
 
                 <p className="font-medium">{transmission}</p>
               </div>
             </div>
 
             <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
-            <PiMoneyFill className="text-indigo-700 h-4 w-4"/>
+              <PiMoneyFill className="text-indigo-700 h-4 w-4" />
 
               <div className="mt-1.5 sm:mt-0">
-                <p className="text-gray-500">Preice</p>
+                <p className="text-gray-500">Preis</p>
 
                 <p className="font-medium">CHF {price}</p>
               </div>
