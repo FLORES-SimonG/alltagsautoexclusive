@@ -17,7 +17,7 @@ export default function Home() {
             height={400}
           />
           <div className="flex flex-row gap-4 w-full">
-            <ButtonPrimary title="Suchen" size="lg" />
+            <ButtonPrimary title="Suchen" size="lg" color="bg-secondary"/>
             <ButtonPrimary title="Vermieten" size="lg" color="transparent" />
           </div>
         </div>
