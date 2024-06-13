@@ -42,10 +42,10 @@ const CommentCarousel = () => {
   return (
 
     <div className="flex flex-row justify-around w-screen flex-nowrap bg-gray-600 text-customWhite h-screen items-center lg:p-10 ">
-      <div className="flex items-center bg-green-700/50 text-white p-2 m-1 rounded-full">
-        <a href="#">
+      <div className="flex items-center bg-green-700/50 text-white p-2 m-1 rounded-full cursor-pointer">
+        <div className="" onClick={prevComment}>
           <MdOutlineNavigateBefore />
-        </a>
+        </div>
         
       </div>
       <div className="flex flex-col items-center p-4 ">
@@ -63,10 +63,10 @@ const CommentCarousel = () => {
           </p>
         </div>
       </div>
-      <div className="flex items-center bg-green-700/50 text-white p-2 m-1 rounded-full">
-        <a href="#">
+      <div className="flex items-center cursor-pointer bg-green-700/50 text-white p-2 m-1 rounded-full">
+        <div  onClick={nextComment}>
           <MdOutlineNavigateNext />
-        </a>
+        </div>
         
       </div>
     </div>
