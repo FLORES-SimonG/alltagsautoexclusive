@@ -3,13 +3,14 @@ import CardProduct from "./CardProduct";
 
 interface ModuleBestViewedArrayProps {
     number: number;
+    strict: boolean;
     }
 
 export default function ModuleBestViewedArray(numberFromPage: ModuleBestViewedArrayProps) {
     const sortedCarsClick = sortedCarsByClicks(carsExample);
     
   return (
-    <div className="lg:w-2/3  flex flex-row justify-center gap-10 flex-wrap ">
+    <div className={`${!numberFromPage.strict? "lg:w-2/3" : ""}  flex flex-row justify-center gap-10 flex-wrap `}>
       {sortedCarsClick.map((car, index) => {
         if (index < numberFromPage.number) {
           return (

@@ -16,7 +16,7 @@ export default function BestViewed() {
           />
         </div>
       </div>
-      <ModuleBestViewedArray number={2} />
+      <ModuleBestViewedArray number={2} strict={true} />
     </div>
   );
 }
