@@ -3,13 +3,13 @@ import Image from "next/image";
 export default function Navbar() {
   return (
     <nav className="bg-gray-800 px-8 py-3 flex flex-row justify-center lg:justify-between items-center">
-      <a href="#">
+      <a href="/">
         <Image src="/logo.svg" alt="logo" width={200} height={200} />
       </a>
       <ul className="hidden lg:flex justify-center gap-10">
         <li>
           <a
-            href="#"
+            href="/"
             className="text-customWhite hover:text-secondary/95 transition-colors"
           >
             Home
@@ -25,7 +25,7 @@ export default function Navbar() {
         </li>
         <li>
           <a
-            href="#"
+            href="/store"
             className="text-customWhite hover:text-secondary/95 transition-colors"
           >
             Autos

@@ -41,7 +41,7 @@ const CommentCarousel = () => {
 
   return (
 
-    <div className="flex flex-row justify-around w-screen flex-nowrap bg-gray-600 text-customWhite h-screen items-center lg:p-10 ">
+    <div className="flex flex-row justify-around  flex-nowrap bg-gray-600 text-customWhite h-screen items-center lg:p-10 ">
       <div className="flex items-center bg-green-700/50 text-white p-2 m-1 rounded-full cursor-pointer">
         <div className="" onClick={prevComment}>
           <MdOutlineNavigateBefore />
