@@ -1,16 +1,17 @@
 import carsExample from "@/helpers/carsExample";
-import { Card } from "flowbite-react";
-import Image from "next/image";
+
 import CardProduct from "./CardProduct";
 import { sortedCarsById } from "@/helpers/carsExample";
-import ButtonPrimary from "./buttons/ButtonPrimary";
-interface ModuleBestViewedArrayProps {
+
+interface ModuleNewsCarsProps {
   number: number;
 }
 
-export default function ModuleBestViewedArray(
-  numberFromPage: ModuleBestViewedArrayProps
-) {
+//* ------------------------------------------------------
+//! ORGANIZADO POR ID. LOS MÁS NUEVOS PRIMERO
+//* ------------------------------------------------------
+
+export default function ModuleNewsCars(numberFromPage: ModuleNewsCarsProps) {
   const sortedCars = sortedCarsById(carsExample);
 
   return (

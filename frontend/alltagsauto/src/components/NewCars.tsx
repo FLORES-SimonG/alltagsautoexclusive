@@ -1,18 +1,14 @@
-import carsExample from "@/helpers/carsExample";
-import { Card } from "flowbite-react";
-import Image from "next/image";
-import CardProduct from "./CardProduct";
-import { sortedCarsById } from "@/helpers/carsExample";
+
 import ButtonPrimary from "./buttons/ButtonPrimary";
-import ModuleNewsCars from "./ModuleNewsCars";
+import ModuleNewCarsArray from "./ModuleNewCarsArray";
 
 export default function NewCars() {
-  // console.log(carsExample);
+ 
   
   return (
     <div className="   items-center justify-between  p-10 flex flex-row lg:gap-4 gap-10 bg-gray-600 flex-wrap   ">
       <div >
-        <ModuleNewsCars number={2} />
+        <ModuleNewCarsArray number={2} />
       </div>
 
       <div className=" flex flex-col  lg:w-1/3   text-customWhite  ">
