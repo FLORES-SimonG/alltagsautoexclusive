@@ -13,6 +13,7 @@ export default function BestViewed() {
             size="sm"
             color="bg-indigo-700"
             customHover="bg-indigo-600"
+            onClick="/store"
           />
         </div>
       </div>

@@ -18,7 +18,7 @@ export default function NewCars() {
           Katalog!
         </p>
         <div className=" flex justify-center m-6">
-          <ButtonPrimary title="Mehr sehen" size="sm" color="bg-indigo-700" customHover="bg-indigo-600" />
+          <ButtonPrimary title="Mehr sehen" size="sm" color="bg-indigo-700" customHover="bg-indigo-600" onClick="store" />
         </div>
       </div>
     </div>
