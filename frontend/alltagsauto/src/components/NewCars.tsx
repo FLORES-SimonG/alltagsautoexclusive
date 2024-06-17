@@ -3,7 +3,7 @@ import ModuleNewCarsArray from "./ModuleNewCarsArray";
 
 export default function NewCars() {
   return (
-    <div className="items-center justify-between  p-10 flex flex-row lg:gap-4 gap-10 bg-gray-600 flex-wrap   ">
+    <div className="items-center justify-between p-10 flex flex-row lg:gap-4 gap-10 bg-gray-600 flex-wrap   ">
       <div>
         <ModuleNewCarsArray number={2} />
       </div>
