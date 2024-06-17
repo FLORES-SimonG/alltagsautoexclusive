@@ -1,4 +1,6 @@
 "use client";
+import { MdOutlineNavigateNext } from "react-icons/md";
+import { MdOutlineNavigateBefore } from "react-icons/md";
 import { useState } from "react";
 
 const comments = [
@@ -38,14 +40,13 @@ const CommentCarousel = () => {
   };
 
   return (
-    <div className="flex flex-row justify-between w-full flex-nowrap">
-      <div className="flex items-center">
-        <button
-          onClick={prevComment}
-          className=" bg-green-700/50 text-white p-4 rounded-full"
-        >
-          {"<"}
-        </button>
+
+    <div className="flex flex-row justify-around  flex-nowrap bg-gray-600 text-customWhite h-screen items-center lg:p-10 ">
+      <div className="flex items-center bg-green-700/50 text-white p-2 m-1 rounded-full cursor-pointer">
+        <div className="" onClick={prevComment}>
+          <MdOutlineNavigateBefore />
+        </div>
+        
       </div>
       <div className="flex flex-col items-center p-4 ">
         <div className="w-full flex flex-col items-center">
@@ -62,13 +63,11 @@ const CommentCarousel = () => {
           </p>
         </div>
       </div>
-      <div className="flex items-center">
-        <button
-          onClick={nextComment}
-          className=" bg-green-700/50 text-white p-4 rounded-full"
-        >
-          {">"}
-        </button>
+      <div className="flex items-center cursor-pointer bg-green-700/50 text-white p-2 m-1 rounded-full">
+        <div  onClick={nextComment}>
+          <MdOutlineNavigateNext />
+        </div>
+        
       </div>
     </div>
   );
