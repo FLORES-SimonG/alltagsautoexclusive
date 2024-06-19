@@ -10,7 +10,7 @@ export default function ModuleBestViewedArray(numberFromPage: ModuleBestViewedAr
     const sortedCarsClick = sortedCarsByClicks(carsExample);
     
   return (
-    <div className={`${!numberFromPage.strict? "lg:w-2/3" : ""}  flex flex-row justify-center gap-10 flex-wrap `}>
+    <div className={`${!numberFromPage.strict? "lg:w-2/3" : ""}  flex flex-row justify-start content-center items-center gap-10 flex-wrap `}>
       {sortedCarsClick.map((car, index) => {
         if (index < numberFromPage.number) {
           return (
