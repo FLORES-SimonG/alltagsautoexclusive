@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className="bg-gray-800 px-8 py-3 flex flex-row justify-center lg:justify-between items-center">
+    <nav className="sticky top-0 bg-gray-800 px-8 py-3 flex flex-row justify-center lg:justify-between items-center z-50">
       <a href="/">
         <Image src="/logo.svg" alt="logo" width={200} height={200} />
       </a>
@@ -37,7 +37,7 @@ export default function Navbar() {
             </a>
           </li> */}
       </ul>
-      
+
       <button className="text-white hidden lg:flex py-3 px-10 justify-center items-center gap-8 border-white border-2 rounded-lg hover:border-tertiary transition-colors">
         Anmelden
       </button>
