@@ -24,7 +24,7 @@ export default function CardProduct({
     <div>
       <a
         href="#"
-        className="block rounded-lg p-4 shadow-sm shadow-indigo-100 bg-white w-80 lg:w-96"
+        className="block rounded-lg p-4 shadow-xl shadow-indigo-100 bg-white w-80 lg:w-96"
       >
         <Image
           alt={name}
