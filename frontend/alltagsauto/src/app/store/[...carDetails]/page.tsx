@@ -21,7 +21,7 @@ export default function carDetails({ id }: CarDetailsProps) {
   } else {
     return (
         <div>
-        <h2>Sie haben die ID --{id} gewählt</h2>
+        {/* <h2>Sie haben die ID --{id} gewählt</h2> */}
 
   <div className="h-screen w-full flex flex-col justify-center items-center ">
     <InProgress />
