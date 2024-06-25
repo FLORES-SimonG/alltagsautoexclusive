@@ -1852,7 +1852,7 @@ const EnConstruccion = () => {
             {/* <script xmlns="" /> */}
           </svg>
           <h1 className="mt-6 text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Simon sigue construyendo
+                Simón baut noch an dieser Seite
           </h1>
   
           <Link href="/">
