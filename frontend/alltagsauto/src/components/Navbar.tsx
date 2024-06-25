@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
@@ -38,9 +39,9 @@ export default function Navbar() {
           </li> */}
       </ul>
 
-      <button className="text-white hidden lg:flex py-3 px-10 justify-center items-center gap-8 border-white border-2 rounded-lg hover:border-tertiary transition-colors">
+      <Link href="/auth/login"><button className="text-white hidden lg:flex py-3 px-10 justify-center items-center gap-8 border-white border-2 rounded-lg hover:border-tertiary transition-colors">
         Anmelden
-      </button>
+      </button></Link>
     </nav>
   );
 }
