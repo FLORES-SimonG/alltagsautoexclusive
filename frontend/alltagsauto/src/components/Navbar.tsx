@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
@@ -8,28 +9,28 @@ export default function Navbar() {
       </a>
       <ul className="hidden lg:flex justify-center gap-10">
         <li>
-          <a
+          <Link
             href="/"
             className="text-customWhite hover:text-secondary/95 transition-colors"
           >
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             href="#"
             className="text-customWhite hover:text-secondary/95 transition-colors"
           >
             Über uns
-          </a>
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             href="/store"
             className="text-customWhite hover:text-secondary/95 transition-colors"
           >
             Autos
-          </a>
+          </Link>
         </li>
         {/* <li>
             <a href="#" className="text-customWhite hover:text-secondary/95 transition-colors">
@@ -39,7 +40,7 @@ export default function Navbar() {
       </ul>
 
       <button className="text-white hidden lg:flex py-3 px-10 justify-center items-center gap-8 border-white border-2 rounded-lg hover:border-tertiary transition-colors">
-        Anmelden
+        <Link href="/user">Anmelden</Link>
       </button>
     </nav>
   );
