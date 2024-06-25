@@ -4,11 +4,14 @@ import { Formik, Form, Field, ErrorMessage, type FormikHelpers } from "formik";
 import warningIcon from "../../../public/IconWarrning.svg";
 import { postLogin } from "@/helpers/auth/postLogin";
 import showPasswordWarning from "../../../public/showPasswordWarning.svg";
+import showPasswordCloseWarning from "../../../public/showPasswordCloseWarning.svg";
 import showPassword from "../../../public/showPassword.svg";
+import showPasswordClose from "../../../public/showPasswordClose.svg";
 import { useState } from "react";
 import Swal from "sweetalert2";
 import Cookies from "js-cookie";
 import Image from "next/image";
+import ButtonPrimary from "../buttons/ButtonPrimary";
 interface IFormValues {
   email: string;
   password: string;
@@ -94,16 +97,16 @@ const FormsLogin = () => {
                 type="email"
                 name="email"
                 placeholder="Ingrese correo electrónico"
-                className={`w-full rounded-l-md border-backgroundGrey border-r-transparent border placeholder:text-textParagraph px-3 py-2 focus-visible:outline-none  ${
+                className={`w-full rounded-l-md border-backgroundGrey border-r-transparent border placeholder:text-textParagraph px-3 py-2 focus:outline-none focus:border-backgroundGrey focus:border-r-transparent focus:shadow-none focus:ring-0  ${
                   errors.email && touched.email
-                    ? "border-warningBorder text-warningText font-medium"
+                    ? "border-warningBorder text-warningText font-medium focus:border-warningBorder"
                     : ""
                 }`}
               />
               <div
-                className={`flex justify-center rounded-r-md px-4 bg-white  border-backgroundGrey border border-l-transparent focus-visible:outline  ${
+                className={`flex justify-center rounded-r-md px-4 bg-white  border-backgroundGrey border border-l-transparent focus:outline-none focus:border-backgroundGrey focus:border-r-transparent focus:shadow-none focus:ring-0 ${
                   errors.email && touched.email
-                    ? "border-warningBorder text-warningText font-medium "
+                    ? "border-warningBorder text-warningText font-medium focus:border-warningBorder"
                     : ""
                 }`}
               >
@@ -132,35 +135,53 @@ const FormsLogin = () => {
                 type={passwordText}
                 name="password"
                 placeholder="Ingrese contraseña"
-                className={`w-96 rounded-l-md border-backgroundGrey border-r-transparent border placeholder:text-textParagraph px-3 py-2 focus-visible:outline-none  ${
+                className={`w-96 rounded-l-md border-backgroundGrey border-r-transparent border placeholder:text-textParagraph px-3 py-2 focus:outline-none focus:border-backgroundGrey focus:border-r-transparent focus:shadow-none focus:ring-0  ${
                   errors.password && touched.password
-                    ? "border-warningBorder text-warningText font-medium"
+                    ? "border-warningBorder text-warningText font-medium focus:border-warningBorder"
                     : ""
                 }`}
               />
               <div
-                className={`flex justify-center rounded-r-md px-4 bg-white  border-backgroundGrey border border-l-transparent focus-visible:outline  ${
+                className={`flex justify-center rounded-r-md px-4 bg-white border-backgroundGrey border border-l-transparent focus:outline-none focus:border-backgroundGrey focus:border-r-transparent focus:shadow-none focus:ring-0  ${
                   errors.password && touched.password
-                    ? "border-warningBorder text-warningText font-medium "
+                    ? "border-warningBorder text-warningText font-medium focus:border-warningBorder"
                     : ""
                 }`}
               >
-                <Image
+                {passwordText === "password" ? <Image
                   src={showPasswordWarning}
                   alt="warningIcon"
                   className={`${
                     errors.password && touched.password ? "block" : "hidden"
                   }`}
                   onClick={handleShow}
-                />
+                />:
                 <Image
+                  src={showPasswordCloseWarning}
+                  alt="warningIcon"
+                  className={`${
+                    errors.password && touched.password ? "block" : "hidden"
+                  }`}
+                  onClick={handleShow}
+                />
+                }
+                {passwordText === "password" ?<Image
                   src={showPassword}
                   alt="warningIcon"
                   className={`${
                     errors.password && touched.password ? "hidden" : "block"
                   }`}
                   onClick={handleShow}
+                />:
+                <Image
+                  src={showPasswordClose}
+                  alt="warningIcon"
+                  className={`${
+                    errors.password && touched.password ? "hidden" : "block"
+                  }`}
+                  onClick={handleShow}
                 />
+                }
               </div>
             </div>
             <div className="h-8 text-warning">
@@ -178,12 +199,12 @@ const FormsLogin = () => {
           </div>
 
           <div className="  flex flex-col items-center justify-center  gap-5">
-            <button
-              type="submit"
-              className="bg-primary text-textPrimary  w-64  py-1 px-3 transition-all rounded-full text-lg shadow-3xl hover:scale-105 focus:shadow-none font-medium  whitespace-nowrap"
-            >
-              Iniciar sesión
-            </button>
+            <ButtonPrimary
+              title="Iniciar con Google" size="lg" color="bg-tertiary"
+            /> 
+            <ButtonPrimary
+              title="Iniciar sesión" size="lg" color="bg-secondary"
+            />   
           </div>
         </Form>
       )}

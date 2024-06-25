@@ -1,11 +1,11 @@
+import FormsRegister from "@/components/forms/FormsRegister";
 import Image from "next/image";
 import logoIcon from "../../../../public/logoPrincipal.svg";
 import homeBack from "../../../../public/homeBack.svg"
-import FormsLogin from "@/components/forms/FormsLogin";
-export default function Login() {
+export default function Register() {	
     return (
-    <div>
-        <a href="/">
+        <div>
+            <a href="/">
         <Image
             src={homeBack}
             alt="Fondo de la página de inicio"
@@ -27,9 +27,11 @@ export default function Login() {
             <div
             className="bg-textPrimary w-1/2 flex flex-col items-center justify-center"
             >
-            <FormsLogin/>
+            <FormsRegister/>
             </div>
         </div>
-    </div>
+            
+        </div>  
     );
 }
+
