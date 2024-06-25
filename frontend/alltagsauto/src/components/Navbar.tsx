@@ -18,7 +18,7 @@ export default function Navbar() {
         </li>
         <li>
           <Link
-            href="#"
+            href="/about"
             className="text-customWhite hover:text-secondary/95 transition-colors"
           >
             Über uns
