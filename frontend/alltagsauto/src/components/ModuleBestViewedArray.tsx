@@ -16,6 +16,7 @@ export default function ModuleBestViewedArray(numberFromPage: ModuleBestViewedAr
           return (
             <CardProduct
               key={car.id}
+              id={car.id}
               image={car.mainImage}
               price={car.pricePerDayCHF}
               transmission={car.transmission}
