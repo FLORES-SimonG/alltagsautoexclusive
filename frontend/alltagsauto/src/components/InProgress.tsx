@@ -1854,6 +1854,7 @@ const EnConstruccion = () => {
           <h1 className="mt-6 text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                 Simón baut noch an dieser Seite
           </h1>
+          <h2>Brauchen Sie mehr Informationen?: <a className="font-bold bg-red-300 p-1 rounded-xl" href="https://alltagsauto.ch/">Click Hier!</a></h2>
   
           <Link href="/">
            <p className="my-4 text-gray-100 bg-slate-400 rounded-full hover:scale-105 transition-transform ">Home</p>
