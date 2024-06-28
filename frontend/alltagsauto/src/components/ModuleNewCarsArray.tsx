@@ -25,6 +25,7 @@ export default function ModuleNewsCars(numberFromPage: ModuleNewsCarsProps) {
               price={car.pricePerDayCHF}
               transmission={car.transmission}
               fuelType={car.fuelType}
+              id={car.id}
               location={car.location}
               name={car.name}
             />

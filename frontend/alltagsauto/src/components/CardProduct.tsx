@@ -2,6 +2,7 @@ import { FaCar } from "react-icons/fa";
 import { PiMoneyFill } from "react-icons/pi";
 import { BsFillFuelPumpFill } from "react-icons/bs";
 import Image from "next/image";
+import Link from "next/link";
 
 interface CardProductProps {
   image: string;
@@ -9,6 +10,7 @@ interface CardProductProps {
   transmission: string;
   fuelType: string;
   location: string;
+  id: number;
   name: string;
 }
 
@@ -17,13 +19,14 @@ export default function CardProduct({
   price,
   transmission,
   fuelType,
+  id,
   name,
   location,
 }: CardProductProps) {
   return (
     <div>
-      <a
-        href="#"
+      <Link
+        href={`/store/${id}`}
         className="block rounded-lg p-4 shadow-xl shadow-indigo-100 bg-white w-80 lg:w-96"
       >
         <Image
@@ -82,7 +85,7 @@ export default function CardProduct({
             </div>
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   );
 }

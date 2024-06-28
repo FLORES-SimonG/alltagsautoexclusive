@@ -22,7 +22,7 @@ export default function Home() {
         </div>
       </div>
       <div className="relative lg:hidden">
-  {/* Imagen de fondo */}
+
   <Image
     src="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     alt="background"
@@ -31,7 +31,7 @@ export default function Home() {
     className="w-full h-auto"
   />
   
-  {/* Contenido superpuesto */}
+
   <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-black/10 p-5 rounded-lg lg:hidden">
     <Image
       src="/alltagsAutoExclusive.svg"
