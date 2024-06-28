@@ -1,30 +1,30 @@
 "use client";
-import { MenuFilter } from "@/components/MenuFilter";
+// import { MenuFilter } from "@/components/MenuFilter";
 import ModuleBestViewedArray from "@/components/ModuleBestViewedArray";
-import FilterTopAside from "@/components/FilterTopAside";
+// import FilterTopAside from "@/components/FilterTopAside";
 
-import { useState } from "react";
-import {
-  Dialog,
-  DialogPanel,
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
-  Transition,
-  TransitionChild,
-} from "@headlessui/react";
-import { XMarkIcon } from "@heroicons/react/24/outline";
-import {
-  ChevronDownIcon,
-  FunnelIcon,
-  MinusIcon,
-  PlusIcon,
-  Squares2X2Icon,
-} from "@heroicons/react/20/solid";
+// import { useState } from "react";
+// import {
+//   Dialog,
+//   DialogPanel,
+//   Disclosure,
+//   DisclosureButton,
+//   DisclosurePanel,
+//   Menu,
+//   MenuButton,
+//   MenuItem,
+//   MenuItems,
+//   Transition,
+//   TransitionChild,
+// } from "@headlessui/react";
+// import { XMarkIcon } from "@heroicons/react/24/outline";
+// import {
+//   ChevronDownIcon,
+//   FunnelIcon,
+//   MinusIcon,
+//   PlusIcon,
+//   Squares2X2Icon,
+// } from "@heroicons/react/20/solid";
 import MobileFilterProducts from "@/components/MobileFilterProducts";
 
 // const sortOptions = [
@@ -79,12 +79,12 @@ import MobileFilterProducts from "@/components/MobileFilterProducts";
 //   },
 // ];
 
-function classNames(...classes: any) {
-  return classes.filter(Boolean).join(" ");
-}
+// function classNames(...classes: any) {
+//   return classes.filter(Boolean).join(" ");
+// }
 
 export default function Store() {
-  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  // const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
   return (
     <div>
