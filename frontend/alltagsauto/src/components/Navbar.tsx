@@ -1,7 +1,12 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
+
+  if (pathname === "/auth/login" || pathname === "/auth/register") return null; 
   return (
     <nav className="sticky top-0 bg-gray-800 px-8 py-3 flex flex-row justify-center lg:justify-between items-center z-50">
       <a href="/">
@@ -39,9 +44,9 @@ export default function Navbar() {
           </li> */}
       </ul>
 
-      <button className="text-white hidden lg:flex py-3 px-10 justify-center items-center gap-8 border-white border-2 rounded-lg hover:border-tertiary transition-colors">
-        <Link href="/user">Anmelden</Link>
-      </button>
+      <Link href="/auth/login"><button className="text-white hidden lg:flex py-3 px-10 justify-center items-center gap-8 border-white border-2 rounded-lg hover:border-tertiary transition-colors">
+        Anmelden
+      </button></Link>
     </nav>
   );
 }
