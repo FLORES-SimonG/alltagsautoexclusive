@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      ringWidth: {
+        DEFAULT: '0px', // Establece el ancho del anillo por defecto en 0
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -21,8 +24,12 @@ const config: Config = {
           // primary: '#222831',
           secondary: '#008A90',
           customWhite: '#FAFAFA',
-          tertiary: '#C66912'
-        
+          tertiary: '#C66912',
+          warningText: '#7F1D1D',
+          warningBorder: '#FCA5A5',
+          warning: '#EF4444',
+          backgroundGrey: '#A7BED3',
+          textParagraph: '#525560',
     },
   },
   },

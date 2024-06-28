@@ -21,7 +21,7 @@ const EnConstruccion = () => {
             <g
               id="Character/plant"
               stroke="none"
-              stroke-width="1"
+              strokeWidth="1"
               fill="none"
               fill-rule="evenodd"
             >
