@@ -1,122 +1,14 @@
 "use client";
-// import { MenuFilter } from "@/components/MenuFilter";
-import ModuleBestViewedArray from "@/components/ModuleBestViewedArray";
-// import FilterTopAside from "@/components/FilterTopAside";
 
-// import { useState } from "react";
-// import {
-//   Dialog,
-//   DialogPanel,
-//   Disclosure,
-//   DisclosureButton,
-//   DisclosurePanel,
-//   Menu,
-//   MenuButton,
-//   MenuItem,
-//   MenuItems,
-//   Transition,
-//   TransitionChild,
-// } from "@headlessui/react";
-// import { XMarkIcon } from "@heroicons/react/24/outline";
-// import {
-//   ChevronDownIcon,
-//   FunnelIcon,
-//   MinusIcon,
-//   PlusIcon,
-//   Squares2X2Icon,
-// } from "@heroicons/react/20/solid";
+import ModuleBestViewedArray from "@/components/ModuleBestViewedArray";
+
 import MobileFilterProducts from "@/components/MobileFilterProducts";
 
-// const sortOptions = [
-//   { name: "Most Popular", href: "#", current: true },
-//   { name: "Best Rating", href: "#", current: false },
-//   { name: "Newest", href: "#", current: false },
-//   { name: "Price: Low to High", href: "#", current: false },
-//   { name: "Price: High to Low", href: "#", current: false },
-// ];
-// const subCategories = [
-//   { name: "Totes", href: "#" },
-//   { name: "Backpacks", href: "#" },
-//   { name: "Travel Bags", href: "#" },
-//   { name: "Hip Bags", href: "#" },
-//   { name: "Laptop Sleeves", href: "#" },
-// ];
-// const filters = [
-//   {
-//     id: "color",
-//     name: "Color",
-//     options: [
-//       { value: "white", label: "White", checked: false },
-//       { value: "beige", label: "Beige", checked: false },
-//       { value: "blue", label: "Blue", checked: true },
-//       { value: "brown", label: "Brown", checked: false },
-//       { value: "green", label: "Green", checked: false },
-//       { value: "purple", label: "Purple", checked: false },
-//     ],
-//   },
-//   {
-//     id: "category",
-//     name: "Category",
-//     options: [
-//       { value: "new-arrivals", label: "New Arrivals", checked: false },
-//       { value: "sale", label: "Sale", checked: false },
-//       { value: "travel", label: "Travel", checked: true },
-//       { value: "organization", label: "Organization", checked: false },
-//       { value: "accessories", label: "Accessories", checked: false },
-//     ],
-//   },
-//   {
-//     id: "size",
-//     name: "Size",
-//     options: [
-//       { value: "2l", label: "2L", checked: false },
-//       { value: "6l", label: "6L", checked: false },
-//       { value: "12l", label: "12L", checked: false },
-//       { value: "18l", label: "18L", checked: false },
-//       { value: "20l", label: "20L", checked: false },
-//       { value: "40l", label: "40L", checked: true },
-//     ],
-//   },
-// ];
-
-// function classNames(...classes: any) {
-//   return classes.filter(Boolean).join(" ");
-// }
-
 export default function Store() {
-  // const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-
   return (
     <div>
       <div className="bg-white">
         <div>
-          {/* <!--
-      Mobile filter dialog
-
-      Off-canvas filters for mobile, show/hide based on off-canvas filters state.
-    --> */}
-
-          {/* <!--
-        Off-canvas menu backdrop, show/hide based on off-canvas menu state.
-
-        Entering: "transition-opacity ease-linear duration-300"
-          From: "opacity-0"
-          To: "opacity-100"
-        Leaving: "transition-opacity ease-linear duration-300"
-          From: "opacity-100"
-          To: "opacity-0"
-      --> */}
-
-          {/* <!--
-          Off-canvas menu, show/hide based on off-canvas menu state.
-
-          Entering: "transition ease-in-out duration-300 transform"
-            From: "translate-x-full"
-            To: "translate-x-0"
-          Leaving: "transition ease-in-out duration-300 transform"
-            From: "translate-x-0"
-            To: "translate-x-full"
-        --> */}
           {/* //!Mobile Filter */}
           <MobileFilterProducts />
           {/* //!FIN Mobile Filter */}
@@ -124,8 +16,7 @@ export default function Store() {
           <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900">
-              Alle Inserate
-
+                Alle Inserate
               </h1>
 
               <div className="flex items-center">
@@ -249,8 +140,6 @@ export default function Store() {
                         </div>
                       </details>
                     </div>
-
-                   
                   </div>
                 </div>
               </div>
@@ -269,7 +158,6 @@ export default function Store() {
                     role="list"
                     className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900"
                   >
-                  
                     <li>
                       <a href="#">Ferrari</a>
                     </li>
@@ -516,31 +404,6 @@ export default function Store() {
           </main>
         </div>
       </div>
-
-      {/* <div className="flex flex-col">
-      <div className="flex flex-row ">
-        <div className=" w-96 bg-blue-200">
-          <MenuFilter />
-        </div>
-        <div>
-          <div className="flex flex-col gap-0 ">
-            <div className="flex flex-row items-center justify-between p-5">
-              <h2 className="  text-3xl h-10 items-start justify-center flex flex-col font-semibold">
-                Alle Inserate
-              </h2>
-
-              <div>
-                <FilterTopAside />
-              </div>
-            </div>
-            <hr className="" />
-          </div>
-          <div className=" my-10 mx-6 flex flex-row flex-wrap ">
-            <ModuleBestViewedArray number={5} strict={true} />
-          </div>
-        </div>
-      </div>
-    </div> */}
     </div>
   );
 }
