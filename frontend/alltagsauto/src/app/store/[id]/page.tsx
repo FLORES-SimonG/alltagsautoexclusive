@@ -5,16 +5,15 @@ import { PiMoneyFill } from "react-icons/pi";
 import { BsFillFuelPumpFill } from "react-icons/bs";
 import sportsCars from "@/helpers/carsExample";
 
-
-async function getCarData(id: Number) {
-  let carSelected = sportsCars.find((car) => car.id == id);
-  return carSelected;
-}
-
 interface CarDetailsProps {
   params: {
     id: string;
   };
+}
+
+async function getCarData(id: Number) {
+  let carSelected = sportsCars.find((car) => car.id == id);
+  return carSelected;
 }
 
 export default async function CarDetails({ params }: CarDetailsProps) {
@@ -26,15 +25,18 @@ export default async function CarDetails({ params }: CarDetailsProps) {
   }
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">{car.name}</h1>
+    <div className="container ">
+     
+
       <Image
         alt={car.name}
         src={car.mainImage}
-        width={384}
+        width={1200}
         height={384}
-        className="h-56 w-full rounded-md object-cover"
-      />
+        className="h-96 w-full rounded-md object-cover "
+        />
+      
+      <h1 className="text-2xl font-bold mb-4">{car.name}</h1>
       <div className="mt-2">
         <dl>
           <div>
