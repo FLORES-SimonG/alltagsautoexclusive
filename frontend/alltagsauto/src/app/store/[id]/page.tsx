@@ -26,18 +26,18 @@ export default async function CarDetails({ params }: CarDetailsProps) {
 
   return (
     <>
-      <div className="relative overflow-auto h-96 w-96 lg:w-screen">
-  <Image
-    alt={car.name}
-    src={car.mainImage}
-    height={1200}
-    width={1200}
-    quality={100}
-    className="rounded-b-lg object-cover h-screen w-full"
-  />
-        <div className="absolute top-0 w-full h-screen bg-gradient-to-b from-transparent to-black/50"></div>
-        <div className="absolute top-0  w-full h-full flex lg:items-center items-end justify-end right-7">
-          <div className=" flex lg:flex-col flex-row gap-8 text-xs fixed bg-white/80 p-8 rounded-lg">
+      <div className="relative overflow-auto h-full lg:w-full">
+        <Image
+          alt={car.name}
+          src={car.mainImage}
+          height={1200}
+          width={1200}
+          quality={100}
+          className=" object-cover h-screen lg:w-full"
+        />
+        <div className="absolute top-0 w-full h-screen bg-gradient-to-b from-black/50 to-transparent"></div>
+        <div className="absolute top-0  lg:w-full h-full flex lg:items-center items-end justify-end right-7">
+          <div className=" flex lg:flex-col flex-row gap-8 text-xs relative bottom-20  bg-white/80 p-8 rounded-lg">
             <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
               <BsFillFuelPumpFill className="text-indigo-700 h-4 w-4" />
               <div className="mt-1.5 sm:mt-0">
@@ -62,6 +62,28 @@ export default async function CarDetails({ params }: CarDetailsProps) {
           </div>
         </div>
       </div>
+      <section>
+        <div className="px-10 py-6 flex flex-col gap-4">
+          <h2 className="font-bold text-4xl">{car.name}</h2>
+          <div className="flex flex-col gap-1 ">
+            <h3 className="font-bold text-2xl">Informationen</h3>
+            <div className="flex flex-row flex-nowrap gap-8">
+              <ul className="flex flex-col flex-wrap">
+                <li><strong>FIRMA:</strong> {car.brand}</li>
+                <li><strong>KM:</strong> {car.kilometersDriven}km.</li>
+                <li><strong>Fuel Type:</strong> {car.fuelType}</li>
+                <li><strong>Engine:</strong> {car.engine}</li>
+              </ul>
+              <ul className="flex flex-col flex-wrap">
+                <li><strong>Jahre: </strong>{car.year}</li>
+                <li><strong>Transmission:</strong> {car.transmission}</li>
+                <li><strong>Engine: </strong>{car.engine}</li>
+                <li><strong>Location: </strong>{car.location}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
