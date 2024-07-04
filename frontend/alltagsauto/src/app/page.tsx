@@ -22,7 +22,7 @@ export default function Home() {
               color="bg-secondary"
               onClick="store"
             />
-            <ButtonPrimary title="Vermieten" size="lg" color="transparent" />
+            <ButtonPrimary title="Vermieten" size="lg" color="transparent" onClick="rentalProposal" />
           </div>
         </div>
       </div>
