@@ -26,18 +26,18 @@ export default async function CarDetails({ params }: CarDetailsProps) {
 
   return (
     <>
-      <div className="relative">
-        <Image
-          alt={car.name}
-          src={car.mainImage}
-          height={1200}
-          width={1200}
-          quality={100}
-          className="rounded-b-lg  h-96 w-96 lg:w-full object-cover"
-        />
-        <div className="absolute top-0 w-full h-full bg-gradient-to-b from-transparent to-black/50"></div>
+      <div className="relative overflow-auto h-96 w-96 lg:w-screen">
+  <Image
+    alt={car.name}
+    src={car.mainImage}
+    height={1200}
+    width={1200}
+    quality={100}
+    className="rounded-b-lg object-cover h-screen w-full"
+  />
+        <div className="absolute top-0 w-full h-screen bg-gradient-to-b from-transparent to-black/50"></div>
         <div className="absolute top-0  w-full h-full flex lg:items-center items-end justify-end right-7">
-          <div className=" flex lg:flex-col flex-row gap-8 text-xs  bg-white/80 p-8 rounded-lg">
+          <div className=" flex lg:flex-col flex-row gap-8 text-xs fixed bg-white/80 p-8 rounded-lg">
             <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
               <BsFillFuelPumpFill className="text-indigo-700 h-4 w-4" />
               <div className="mt-1.5 sm:mt-0">
