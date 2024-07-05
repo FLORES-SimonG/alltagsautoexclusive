@@ -8,7 +8,7 @@ export default function Register() {
             <a href="/">
         <Image
             src={homeBack}
-            alt="Fondo de la página de inicio"
+            alt="homeBack"
             className=" fixed top-5 left-5 z-10"
         />
         </a>
@@ -17,7 +17,7 @@ export default function Register() {
                 <a href="/" className="w-4/6">
                     <Image
                         src={logoIcon}
-                        alt="Logo de Un Litro de Leche Alta Gracia"
+                        alt="Logo"
                         className="w-full"
                         height={100}
                         width={100}
