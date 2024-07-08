@@ -16,35 +16,43 @@ export default function Home() {
             height={400}
           />
           <div className="flex flex-row gap-4 w-full">
-            <ButtonPrimary title="Suchen" size="lg" color="bg-secondary" onClick="store" />
-            <ButtonPrimary title="Vermieten" size="lg" color="transparent" />
+            <ButtonPrimary
+              title="Suchen"
+              size="lg"
+              color="bg-secondary"
+              onClick="store"
+            />
+            <ButtonPrimary title="Vermieten" size="lg" color="transparent" onClick="rentalProposal" />
           </div>
         </div>
       </div>
       <div className="relative lg:hidden">
+        <Image
+          src="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="background"
+          width={1260}
+          height={750}
+          className="w-full h-auto"
+        />
 
-  <Image
-    src="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    alt="background"
-    width={1260}
-    height={750}
-    className="w-full h-auto"
-  />
-  
-
-  <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-black/10 p-5 rounded-lg lg:hidden">
-    <Image
-      src="/alltagsAutoExclusive.svg"
-      alt="logo"
-      width={600}
-      height={400}
-    />
-    <div className="flex flex-row gap-4 w-full">
-      <ButtonPrimary title="Suchen" size="lg" color="bg-secondary" />
-      <ButtonPrimary title="Vermieten" size="lg" color="transparent" />
-    </div>
-  </div>
-</div>
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-black/10 p-5 rounded-lg lg:hidden">
+          <Image
+            src="/alltagsAutoExclusive.svg"
+            alt="logo"
+            width={600}
+            height={400}
+          />
+          <div className="flex flex-row gap-4 w-full">
+          <ButtonPrimary
+              title="Suchen"
+              size="lg"
+              color="bg-secondary"
+              onClick="store"
+            />
+            <ButtonPrimary title="Vermieten" size="lg" color="transparent" onClick="rentalProposal" />
+          </div>
+        </div>
+      </div>
 
       <div className="p-10 flex flex-col gap-4">
         <h2 className="font-bold text-4xl">

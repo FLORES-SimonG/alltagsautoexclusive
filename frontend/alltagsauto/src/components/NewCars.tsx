@@ -8,13 +8,12 @@ export default function NewCars() {
         <ModuleNewCarsArray number={2} />
       </div>
 
-      <div className=" flex flex-col  lg:w-1/3 text-customWhite  ">
-        <h2 className="font-bold text-4xl ">Die letzte Neuheit</h2>
+      <div className=" flex flex-col  lg:w-1/3 text-customWhite  gap-3">
+        <h2 className="font-bold text-4xl ">Neuste Zugänge</h2>
         <p>
-          Verpassen Sie nicht die neuesten und exklusivsten Angebote in unserem
-          Katalog!
+        Bleiben Sie auf dem Laufenden mit unseren neuesten Fahrzeugen! Entdecken Sie die aktuellsten Zugänge in unserer exklusiven Flotte und finden Sie Ihr nächstes Traumauto.
         </p>
-        <div className=" flex justify-center m-6">
+        <div className=" flex justify-center m-4">
           <ButtonPrimary
             title="Mehr sehen"
             size="sm"

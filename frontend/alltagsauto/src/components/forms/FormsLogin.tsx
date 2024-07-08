@@ -28,16 +28,16 @@ const validate = (values: IFormValues) => {
   const passwordRegex = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
   if (!values.password) {
-    errors.password = "La contraseña es requerida";
+    errors.password = "";
   } else if (!passwordRegex.test(values.password)) {
     errors.password =
-      "La contraseña debe tener al menos 8 caracteres, una mayúscula y un número";
+      "Mindestens: 8 Zeichen mit 1 Großbuchstaben und 1 Zahl";
   }
 
   if (!values.email) {
-    errors.email = "El correo electrónico es requerido";
+    errors.email = "Email ist erforderlich";
   } else if (!emailRegex.test(values.email)) {
-    errors.email = "El correo electrónico no es válido";
+    errors.email = "Email ist ungültig";
   }
 
   return errors;
@@ -60,7 +60,7 @@ const FormsLogin = () => {
               Swal.fire({
                 position: "center",
                 icon: "success",
-                title: `Bienvenido`,
+                title: `Willkommen bei Alltagsauto-Exclusive`,
                 showConfirmButton: false,
                 timer: 1500,
               })
@@ -73,7 +73,7 @@ const FormsLogin = () => {
               Swal.fire({
                 position: "center",
                 icon: "error",
-                title: `Usuario no encontrado`,
+                title: `User oder Passwort sind falsch`,
                 showConfirmButton: false,
                 timer: 1500,
               });
@@ -96,7 +96,7 @@ const FormsLogin = () => {
               <Field
                 type="email"
                 name="email"
-                placeholder="Ingrese correo electrónico"
+                placeholder="Schreiben Sie Ihre E-Mail-Adresse"
                 className={`w-full rounded-l-md border-backgroundGrey border-r-transparent border placeholder:text-textParagraph px-3 py-2 focus:outline-none focus:border-backgroundGrey focus:border-r-transparent focus:shadow-none focus:ring-0  ${
                   errors.email && touched.email
                     ? "border-warningBorder text-warningText font-medium focus:border-warningBorder"
@@ -128,13 +128,13 @@ const FormsLogin = () => {
           </div>
           <div className="flex flex-col mb-3">
             <label htmlFor="password" className="font-medium my-2 ">
-              Contraseña
+              Passwort
             </label>
             <div className="flex">
               <Field
                 type={passwordText}
                 name="password"
-                placeholder="Ingrese contraseña"
+                placeholder="Schreiben Sie Ihr Passwort"
                 className={`w-96 rounded-l-md border-backgroundGrey border-r-transparent border placeholder:text-textParagraph px-3 py-2 focus:outline-none focus:border-backgroundGrey focus:border-r-transparent focus:shadow-none focus:ring-0  ${
                   errors.password && touched.password
                     ? "border-warningBorder text-warningText font-medium focus:border-warningBorder"
@@ -194,7 +194,7 @@ const FormsLogin = () => {
               href="/auth/register"
               className=" text-base font-medium m-2 text-center text-textSecondary"
             >
-              ¿No tienes usuario?
+              Registrieren Sie sich hier
             </a>
           </div>
 
