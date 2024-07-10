@@ -7,6 +7,7 @@ import { Car } from 'src/entities/Car.entity';
 @Injectable()
 export class CarsService {
   constructor(private readonly carsRepository: CarsRepository) {}
+
   async getCars(page: number, limit: number, filters?: CarsFilterDto) {
     let carsFound: { data: Car[]; total: number };
     if (filters) {
@@ -23,6 +24,7 @@ export class CarsService {
     }
     return carsFound;
   }
+  
   async getCar(id: string): Promise<Car> {
     const carFound = await this.carsRepository.getCar(id);
     if (!carFound) {

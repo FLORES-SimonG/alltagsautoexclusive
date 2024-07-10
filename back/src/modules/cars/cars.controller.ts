@@ -1,19 +1,5 @@
-import {
-  Body,
-  Controller,
-  Delete,
-  FileTypeValidator,
-  Get,
-  MaxFileSizeValidator,
-  Param,
-  ParseFilePipe,
-  ParseUUIDPipe,
-  Post,
-  Put,
-  Query,
-  UploadedFile,
-  UseInterceptors,
-} from '@nestjs/common';
+import { Body, Controller, Delete, FileTypeValidator, Get, MaxFileSizeValidator, Param, ParseFilePipe, ParseUUIDPipe,
+  Post, Put, Query, UploadedFile, UseInterceptors } from '@nestjs/common';
 import { CarsService } from './cars.service';
 import { DeleteResult, UpdateResult } from 'typeorm';
 import { CarsFilterDto, NewCarDto, UpdateCarDto } from 'src/dtos/Car.dto';
