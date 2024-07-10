@@ -3,12 +3,14 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { CarsFilterDto, NewCarDto, UpdateCarDto } from 'src/dtos/Car.dto';
 import { Car } from 'src/entities/Car.entity';
 import { DeleteResult, Repository, UpdateResult } from 'typeorm';
+import { FilesService } from '../files/files.service';
 
 @Injectable()
 export class CarsRepository {
   constructor(
     @InjectRepository(Car)
     private carsRepository: Repository<Car>,
+    private readonly filesService: FilesService
   ) {}
 
   async getAllCars(
@@ -75,15 +77,33 @@ export class CarsRepository {
 
     return { data, total };
   }
+
   getCar(id: string): Promise<Car> {
     return this.carsRepository.findOneBy({ id });
   }
-  createCar(car: NewCarDto): Promise<Car> {
-    return this.carsRepository.save(car);
+
+  async createCar(car: NewCarDto, image: Express.Multer.File): Promise<Car> {
+    const imageUrl = await this.filesService.uploadImage(image); 
+  
+    const newCar = { 
+      ...car, 
+      image: imageUrl
+    };
+  
+    return this.carsRepository.save(newCar);
   }
-  updateCar(id: string, car: UpdateCarDto): Promise<UpdateResult> {
-    return this.carsRepository.update(id, car);
+
+  async updateCar(id: string, car: UpdateCarDto, image: Express.Multer.File): Promise<UpdateResult> {
+    const imageUrl = await this.filesService.uploadImage(image);
+
+    const updatedCar = {
+      ...car,
+      image: imageUrl
+    }
+
+    return this.carsRepository.update(id, updatedCar);
   }
+
   deleteCar(id: string): Promise<DeleteResult> {
     return this.carsRepository.delete(id);
   }

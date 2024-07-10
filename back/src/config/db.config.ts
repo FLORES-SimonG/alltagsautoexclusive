@@ -1,8 +1,8 @@
 import { DataSource, DataSourceOptions } from 'typeorm';
-import { config as dotenvconfig } from 'dotenv';
+import { config as dotenvConfig } from 'dotenv';
 import { registerAs } from '@nestjs/config';
 
-dotenvconfig({ path: '.env' });
+dotenvConfig({ path: '.env' });
 
 const config = {
   type: 'postgres',
@@ -17,7 +17,7 @@ const config = {
   synchronize: true,
   logging: true,
   dropSchema: false,
-  ssl: process.env.SSL !== undefined ? process.env.SSL : false,
+  ssl: process.env.SSL === "true" ? true : false,
   timezone: 'America/Argentina',
 };
 

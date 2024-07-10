@@ -28,4 +28,7 @@ export class Car {
 
   @Column()
   price: number;
+
+  @Column()
+  image: string;
 }

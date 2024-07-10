@@ -30,16 +30,19 @@ export class CarsService {
     }
     return carFound;
   }
-  async createCar(car: NewCarDto): Promise<Car> {
-    return this.carsRepository.createCar(car);
+
+  async createCar(car: NewCarDto, image: Express.Multer.File): Promise<Car> {
+    return this.carsRepository.createCar(car, image);
   }
-  async updateCar(id: string, car: UpdateCarDto): Promise<UpdateResult> {
-    const result = await this.carsRepository.updateCar(id, car);
+
+  async updateCar(id: string, car: UpdateCarDto, image: Express.Multer.File): Promise<UpdateResult> {
+    const result = await this.carsRepository.updateCar(id, car, image);
     if (result.affected === 0) {
       throw new NotFoundException('Car not found');
     }
     return result;
   }
+
   async deleteCar(id: string): Promise<DeleteResult> {
     const result = await this.carsRepository.deleteCar(id);
     if (result.affected === 0) {
