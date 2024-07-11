@@ -7,6 +7,7 @@ import { Car } from 'src/entities/Car.entity';
 @Injectable()
 export class CarsService {
   constructor(private readonly carsRepository: CarsRepository) {}
+
   async getCars(page: number, limit: number, filters?: CarsFilterDto) {
     let carsFound: { data: Car[]; total: number };
     if (filters) {
@@ -23,6 +24,7 @@ export class CarsService {
     }
     return carsFound;
   }
+  
   async getCar(id: string): Promise<Car> {
     const carFound = await this.carsRepository.getCar(id);
     if (!carFound) {
@@ -30,16 +32,19 @@ export class CarsService {
     }
     return carFound;
   }
-  async createCar(car: NewCarDto): Promise<Car> {
-    return this.carsRepository.createCar(car);
+
+  async createCar(car: NewCarDto, image: Express.Multer.File): Promise<Car> {
+    return this.carsRepository.createCar(car, image);
   }
-  async updateCar(id: string, car: UpdateCarDto): Promise<UpdateResult> {
-    const result = await this.carsRepository.updateCar(id, car);
+
+  async updateCar(id: string, car: UpdateCarDto, image: Express.Multer.File): Promise<UpdateResult> {
+    const result = await this.carsRepository.updateCar(id, car, image);
     if (result.affected === 0) {
       throw new NotFoundException('Car not found');
     }
     return result;
   }
+
   async deleteCar(id: string): Promise<DeleteResult> {
     const result = await this.carsRepository.deleteCar(id);
     if (result.affected === 0) {

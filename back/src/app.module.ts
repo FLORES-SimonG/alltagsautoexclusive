@@ -9,6 +9,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import dbConfig from './config/db.config';
 import { UsersModule } from './modules/users/users.module';
 import { CarsModule } from './modules/cars/cars.module';
+import { FilesModule } from './modules/files/files.module';
 
 @Module({
   imports: [
@@ -27,7 +28,7 @@ import { CarsModule } from './modules/cars/cars.module';
       signOptions: { expiresIn: '1h' },
       secret: process.env.JWT_SECRET,
     }),
-    AuthModule, UsersModule, CarsModule
+    AuthModule, UsersModule, CarsModule, FilesModule
   ],
   controllers: [AppController],
   providers: [AppService],
