@@ -1,5 +1,5 @@
 import { PartialType } from '@nestjs/swagger';
-import { IsNotEmpty, IsString, IsNumber, IsOptional } from 'class-validator';
+import { IsNotEmpty, IsString, IsOptional } from 'class-validator';
 
 export class NewCarDto {
   @IsNotEmpty({ message: 'The brand is required' })
@@ -11,15 +11,12 @@ export class NewCarDto {
   model: string;
 
   @IsNotEmpty({ message: 'The year is required' })
-  @IsNumber({}, { message: 'The year must be a number' })
   year: number;
 
   @IsNotEmpty({ message: 'The seating capacity is required' })
-  @IsNumber({}, { message: 'The seating capacity must be a number' })
   seatingCapacity: number;
 
   @IsNotEmpty({ message: 'The doors number is required' })
-  @IsNumber({}, { message: 'The doors number must be a number' })
   doorsNumber: number;
 
   @IsNotEmpty({ message: 'The fuel type is required' })
@@ -31,7 +28,6 @@ export class NewCarDto {
   transmissionType: string;
 
   @IsNotEmpty({ message: 'The price is required' })
-  @IsNumber({}, { message: 'The price must be a number' })
   price: number;
 }
 
