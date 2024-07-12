@@ -10,14 +10,14 @@ export default function Store() {
       <div className="bg-white">
         <div>
           {/* //!Mobile Filter */}
-          <MobileFilterProducts />
+          {/* <MobileFilterProducts /> */}
           {/* //!FIN Mobile Filter */}
 
-          <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
             <section aria-labelledby="products-heading" className="pb-24 pt-6 ">
               <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
                 {/* <!-- Filters --> */}
-                <form className="hidden lg:block">
+                <form className="hidden lg:block  ">
                   <div className="border-b border-gray-200 py-6">
                     <h3 className="flex w-full items-center justify-between bg-white  text-sm text-gray-400 hover:text-gray-500">
                       <span className="font-medium text-gray-900">
@@ -57,7 +57,6 @@ export default function Store() {
                             Manual
                           </label>
                         </div>
-                        
                       </div>
                     </div>
                   </div>
