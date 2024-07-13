@@ -206,7 +206,10 @@ const FormsLogin = () => {
               title="Iniciar sesión" size="lg" color="bg-secondary" onClick="#"
             />   
             <ButtonPrimary
-              title="Test dashboard" size="lg" color="bg-red-400" onClick="/user"
+              title="Test dashboard User" size="lg" color="bg-red-400" onClick="/user"
+            />   
+            <ButtonPrimary
+              title="Test dashboard Admin" size="lg" color="bg-red-400" onClick="/admin"
             />   
           </div>
         </Form>

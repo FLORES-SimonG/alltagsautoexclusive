@@ -1,17 +1,20 @@
+
+
 // import Image from "next/image";
-// import logoIcon from "../../public/logoPrincipal.svg";
+import logoIcon from "../../public/logoPrincipal.svg";
 import usersExample from "@/helpers/usersExample";
 import Image from "next/image";
 
 
-export default function AsideDashboard(){
+export default function AdminAsideDashboard(){
     return (
           
     <div className="flex h-screen flex-col justify-between border-e bg-white w-1/5">
     <div className="px-4 py-6">
-      {/* <span className="grid h-10 w-32 place-content-center rounded-lg bg-gray-100 text-xs text-gray-600">
-        <Image src={logoIcon} alt="logo" />
-      </span> */}
+      <span className="flex justify-center items-center text-lg font-medium h-10 w-full place-content-center rounded-lg bg-yellow-100  text-gray-600">
+        Admin
+        {/* <Image src={logoIcon} alt="logo" /> */}
+      </span>
 
       <ul className="mt-6 space-y-1">
         <li>
@@ -23,7 +26,7 @@ export default function AsideDashboard(){
           </a>
         </li>
 
-        {/* <li>
+        <li>
           <details className="group [&_summary::-webkit-details-marker]:hidden">
             <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
               <span className="text-sm font-medium"> Teams </span>
@@ -64,25 +67,25 @@ export default function AsideDashboard(){
               </li>
             </ul>
           </details>
-        </li> */}
+        </li>
 
-        {/* <li>
+        <li>
           <a
             href="#"
             className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
           >
             Billing
           </a>
-        </li> */}
+        </li>
 
-        {/* <li>
+        <li>
           <a
             href="#"
             className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
           >
             Invoices
           </a>
-        </li> */}
+        </li>
 
         <li>
           <details className="group [&_summary::-webkit-details-marker]:hidden">
@@ -147,16 +150,16 @@ export default function AsideDashboard(){
       >
         <img
           className="size-10 rounded-full object-cover"
-            src={usersExample[0].photo}
-            alt={usersExample[0].name}
+            src={usersExample[1].photo}
+            alt={usersExample[1].name}
             
         />
 
         <div>
           <p className="text-xs">
-            <strong className="block font-medium">{usersExample[0].name}</strong>
+            <strong className="block font-medium">{usersExample[1].name}</strong>
 
-            <span> {usersExample[0].email} </span>
+            <span> {usersExample[1].email} </span>
           </p>
         </div>
       </a>
