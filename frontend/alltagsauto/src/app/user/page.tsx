@@ -1,11 +1,11 @@
-import InProgress from './../../components/InProgress';
+import AsideDashboard from "@/components/AsideDashboard";
+import InProgress from "./../../components/InProgress";
 
-
-export default function User(){
-
-    return (
-        <div className='h-screen w-full flex flex-col justify-center items-center '>
-            <InProgress/>
-        </div>
-    )
+export default function User() {
+  return (
+    <>
+    <AsideDashboard />
+    
+    </>
+  );
 }
