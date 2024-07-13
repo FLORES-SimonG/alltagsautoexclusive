@@ -192,7 +192,7 @@ const FormsLogin = () => {
             </div>
             <a
               href="/auth/register"
-              className=" text-base font-medium m-2 text-center text-textSecondary"
+              className=" underline text-base font-medium m-2 text-center text-indigo-700"
             >
               Registrieren Sie sich hier
             </a>
@@ -200,10 +200,13 @@ const FormsLogin = () => {
 
           <div className="  flex flex-col items-center justify-center  gap-5">
             <ButtonPrimary
-              title="Iniciar con Google" size="lg" color="bg-tertiary"
+              title="Iniciar con Google" size="lg" color="bg-tertiary" onClick="#"
             /> 
             <ButtonPrimary
-              title="Iniciar sesión" size="lg" color="bg-secondary"
+              title="Iniciar sesión" size="lg" color="bg-secondary" onClick="#"
+            />   
+            <ButtonPrimary
+              title="Test dashboard" size="lg" color="bg-red-400" onClick="/user"
             />   
           </div>
         </Form>
