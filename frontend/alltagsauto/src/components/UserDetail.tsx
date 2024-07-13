@@ -7,7 +7,7 @@ export default function UserDetail() {
           Profile
           
         </h2>
-        <div className=" w-96 h-auto border-black/5 border-2 rounded-lg shadow-md flex-col justify-stretch items-center flex">
+        <div className=" w-96  border-black/5 border-2 rounded-lg shadow-md flex-col justify-stretch items-center flex">
           <div className=" px-6 py-5 justify-center items-center gap-11 inline-flex">
             <img
               className=" rounded-md   shadow"
@@ -18,33 +18,41 @@ export default function UserDetail() {
 
           <div className="self-stretch h-px bg-gray-200" />
           <div className="  px-6 py-5   items-start  w-full border-b ">
-            <div className="flex flex-row gap-24   ">
-              <div className=" w-24  text-gray-500 text-sm font-medium  leading-tight ">
-                Nombre
+            <div className="flex flex-row gap-10   ">
+              <div className=" w-1/3  text-gray-500 text-sm font-medium  leading-tight ">
+                Name
               </div>
-              <div className=" text-gray-900 text-sm font-normal  leading-tight">
+              <div className="w-2/3 text-gray-900 text-sm font-normal  leading-tight">
                 {usersExample[0].name}
               </div>
             </div>
           </div>
-          {/* <div className="self-stretch h-px bg-gray-200" /> */}
           <div className="  px-6 py-5   items-start  w-full border-b ">
-            <div className="flex flex-row gap-24   ">
-              <div className=" w-24  text-gray-500 text-sm font-medium  leading-tight">
-                Apellido
+            <div className="flex flex-row gap-10   ">
+              <div className=" w-1/3  text-gray-500 text-sm font-medium  leading-tight">
+                Nachname
               </div>
-              <div className=" text-gray-900 text-sm font-normal  leading-tight">
-                {usersExample[0].name}
+              <div className="w-2/3 text-gray-900 text-sm font-normal  leading-tight">
+                {usersExample[0].surname}
               </div>
             </div>
           </div>
-          {/* <div className="self-stretch h-px bg-gray-200" /> */}
+          <div className="  px-6 py-5   items-start  w-full border-b ">
+            <div className="flex flex-row gap-10   ">
+              <div className=" w-1/3  text-gray-500 text-sm font-medium  leading-tight">
+                Stadt
+              </div>
+              <div className="w-2/3 text-gray-900 text-sm font-normal  leading-tight">
+                {usersExample[0].city}
+              </div>
+            </div>
+          </div>
           <div className="  px-6 py-5   items-start  w-full ">
-            <div className="flex flex-row gap-24   ">
-              <div className=" w-24  text-gray-500 text-sm font-medium  leading-tight">
+            <div className="flex flex-row gap-10   ">
+              <div className=" w-1/3  text-gray-500 text-sm font-medium  leading-tight">
                 Email
               </div>
-              <div className=" text-gray-900 text-sm font-normal  leading-tight">
+              <div className="w-2/3 text-gray-900 text-sm font-normal  leading-tight">
                 {usersExample[0].email}
               </div>
             </div>
