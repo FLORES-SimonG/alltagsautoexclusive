@@ -4,6 +4,8 @@ import { FaCar } from "react-icons/fa";
 import { PiMoneyFill } from "react-icons/pi";
 import { BsFillFuelPumpFill } from "react-icons/bs";
 import sportsCars from "@/helpers/carsExample";
+import ButtonPrimary from "@/components/buttons/ButtonPrimary";
+import Link from "next/link";
 
 interface CarDetailsProps {
   params: {
@@ -62,14 +64,13 @@ export default async function CarDetails({ params }: CarDetailsProps) {
           </div>
         </div>
       </div>
-      <section>
-        <div className="px-10 py-6 flex flex-col gap-4">
+      <section className="flex flex-row items-center justify-between px-10">
+        <div className=" py-6 flex flex-col gap-4">
           <h2 className="font-bold text-4xl">{car.name}</h2>
           <div className="flex flex-col gap-1 ">
             <h3 className="font-bold text-2xl">Informationen</h3>
             <div className="flex flex-row flex-nowrap gap-8">
               <ul className="flex flex-col flex-wrap">
-                <li><strong>FIRMA:</strong> {car.brand}</li>
                 <li><strong>KM:</strong> {car.kilometersDriven}km.</li>
                 <li><strong>Fuel Type:</strong> {car.fuelType}</li>
                 <li><strong>Engine:</strong> {car.engine}</li>
@@ -77,11 +78,18 @@ export default async function CarDetails({ params }: CarDetailsProps) {
               <ul className="flex flex-col flex-wrap">
                 <li><strong>Jahre: </strong>{car.year}</li>
                 <li><strong>Transmission:</strong> {car.transmission}</li>
-                <li><strong>Engine: </strong>{car.engine}</li>
                 <li><strong>Location: </strong>{car.location}</li>
               </ul>
             </div>
           </div>
+        </div>
+        <div className="flex flex-row gap-6">
+          <Link href="/contactUs">
+          <ButtonPrimary title="Kontaktieren" color="bg-secondary" size="sm" />
+          </Link>
+          <Link href="/store">
+          <ButtonPrimary title="Zurück" color="bg-tertiary" size="sm" />
+          </Link>
         </div>
       </section>
     </>
