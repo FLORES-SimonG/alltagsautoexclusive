@@ -1,9 +1,8 @@
 import AdminAsideDashboard from "@/components/AdminAsideDashboard";
-import InProgress from "./../../components/InProgress";
-import Image from "next/image";
-import logoIcon from "../../../public/logoPrincipal.svg";
+import ListOfComponents from "@/components/ListOfComponents";
 
-export default function Admin() {
+
+export default function SlugList() {
   return (
     <>
       <div
@@ -12,7 +11,7 @@ export default function Admin() {
       >
         <AdminAsideDashboard />
         <div className="flex-grow flex items-center justify-center">
-          <Image src={logoIcon} alt="logo" height={300} width={300} />
+            <ListOfComponents />
         </div>
       </div>
     </>
