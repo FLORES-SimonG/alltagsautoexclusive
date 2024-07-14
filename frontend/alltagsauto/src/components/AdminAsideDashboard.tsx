@@ -2,6 +2,7 @@
 import logoIcon from "../../public/logoPrincipal.svg";
 import usersExample from "@/helpers/usersExample";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AdminAsideDashboard() {
   return (
@@ -51,17 +52,17 @@ export default function AdminAsideDashboard() {
                     href="#"
                     className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                   >
-                    Users
+                    Autos
                   </a>
                 </li>
 
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    href="/admin/UserList"
                     className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                   >
-                    Autos
-                  </a>
+                    Users
+                  </Link>
                 </li>
               </ul>
             </details>
