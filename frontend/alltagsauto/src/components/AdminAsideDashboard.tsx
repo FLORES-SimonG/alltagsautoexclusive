@@ -17,19 +17,19 @@ export default function AdminAsideDashboard(){
       </span>
 
       <ul className="mt-6 space-y-1">
-        <li>
-          <a
-            href="#"
-            className="block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700"
-          >
-            General
-          </a>
-        </li>
+      <li>
+            <a
+              href="/"
+              className="  block rounded-lg  px-4 py-2 text-md font-medium text-gray-700"
+            >
+              Home
+            </a>
+          </li>
 
         <li>
           <details className="group [&_summary::-webkit-details-marker]:hidden">
             <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
-              <span className="text-sm font-medium"> Teams </span>
+              <span className="text-sm font-medium">Liste der Autos & Users</span>
 
               <span className="shrink-0 transition duration-300 group-open:-rotate-180">
                 <svg
@@ -53,7 +53,7 @@ export default function AdminAsideDashboard(){
                   href="#"
                   className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                 >
-                  Banned Users
+                  Users
                 </a>
               </li>
 
@@ -62,7 +62,7 @@ export default function AdminAsideDashboard(){
                   href="#"
                   className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                 >
-                  Calendar
+                  Autos
                 </a>
               </li>
             </ul>
@@ -74,7 +74,7 @@ export default function AdminAsideDashboard(){
             href="#"
             className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
           >
-            Billing
+            New Car
           </a>
         </li>
 
@@ -109,7 +109,7 @@ export default function AdminAsideDashboard(){
             </summary>
 
             <ul className="mt-2 space-y-1 px-4">
-              <li>
+              {/* <li>
                 <a
                   href="#"
                   className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
@@ -125,7 +125,7 @@ export default function AdminAsideDashboard(){
                 >
                   Delete Account
                 </a>
-              </li>
+              </li> */}
 
               <li>
                 <form action="#">
