@@ -9,8 +9,8 @@ import Image from "next/image";
 export default function AdminAsideDashboard(){
     return (
           
-    <div className="flex h-screen flex-col justify-between border-e bg-white w-1/5">
-    <div className="px-4 py-6">
+      <div className="flex bg-white flex-col justify-between border-e  w-1/5">
+      <div className="px-4 py-6">
       <span className="flex justify-center items-center text-lg font-medium h-10 w-full place-content-center rounded-lg bg-yellow-100  text-gray-600">
         Admin
         {/* <Image src={logoIcon} alt="logo" /> */}
