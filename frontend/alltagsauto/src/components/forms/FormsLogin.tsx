@@ -189,7 +189,7 @@ const FormsLogin = () => {
               href="/auth/register"
               className=" underline text-base font-medium m-2 text-center text-indigo-700"
             >
-              Registrieren Sie sich hier
+              Neues Konto erstellen
             </a>
           </div>
 
