@@ -1,7 +1,29 @@
+'use client';
 import usersExample from "@/helpers/usersExample";
+import { useState } from "react";
 
 
 export default function ListOfComponents() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 5;
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = usersExample.slice(indexOfFirstItem, indexOfLastItem);
+
+  const totalPages = Math.ceil(usersExample.length / itemsPerPage);
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
   return (
     <>
       <div className="rounded-lg border border-gray-200">
@@ -25,31 +47,45 @@ export default function ListOfComponents() {
             </thead>
 
             <tbody className="divide-y divide-gray-200">
-              {usersExample.map((user) => (
-                <tr key={user.id}>
-                    <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                       {user.id}
-                       </td>
-                    <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                    {user.surname.toUpperCase()},  {user.name}
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                        {user.email.toLocaleLowerCase()}
-                    </td>
-                    
-                    <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                    {user.city}
-                    </td>
-                </tr>
-                ))}
-             
-
-              
-            </tbody>
+          {currentItems.map((user) => (
+            <tr key={user.id}>
+              <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                {user.id}
+              </td>
+              <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                {user.surname.toUpperCase()}, {user.name}
+              </td>
+              <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                {user.email.toLocaleLowerCase()}
+              </td>
+              <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                {user.city}
+              </td>
+            </tr>
+          ))}
+        </tbody>
           </table>
         </div>
-
-        <div className="rounded-b-lg border-t border-gray-200 px-4 py-2">
+        <div className="flex justify-between mt-4">
+        <button
+          onClick={handlePreviousPage}
+          disabled={currentPage === 1}
+          className="px-4 py-2 bg-gray-300 rounded"
+        >
+          Anterior
+        </button>
+        <span>
+          Página {currentPage} de {totalPages}
+        </span>
+        <button
+          onClick={handleNextPage}
+          disabled={currentPage === totalPages}
+          className="px-4 py-2 bg-gray-300 rounded"
+        >
+          Siguiente
+        </button>
+      </div>
+        {/* <div className="rounded-b-lg border-t border-gray-200 px-4 py-2">
           <ol className="flex justify-end gap-1 text-xs font-medium">
             <li>
               <a
@@ -124,7 +160,7 @@ export default function ListOfComponents() {
               </a>
             </li>
           </ol>
-        </div>
+        </div> */}
       </div>
     </>
   );
