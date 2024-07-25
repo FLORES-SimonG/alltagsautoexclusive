@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { Formik, Form, Field, ErrorMessage, type FormikHelpers } from "formik";
 import warningIcon from "../../../public/IconWarrning.svg";
@@ -30,8 +30,7 @@ const validate = (values: IFormValues) => {
   if (!values.password) {
     errors.password = "";
   } else if (!passwordRegex.test(values.password)) {
-    errors.password =
-      "Mindestens: 8 Zeichen mit 1 Großbuchstaben und 1 Zahl";
+    errors.password = "Mindestens: 8 Zeichen mit 1 Großbuchstaben und 1 Zahl";
   }
 
   if (!values.email) {
@@ -45,7 +44,6 @@ const validate = (values: IFormValues) => {
 
 const FormsLogin = () => {
   const [passwordText, setPasswordText] = useState("password");
-
   const handleShow = () => {
     setPasswordText((prev) => (prev === "password" ? "text" : "password"));
   };
@@ -63,7 +61,7 @@ const FormsLogin = () => {
                 title: `Willkommen bei Alltagsauto-Exclusive`,
                 showConfirmButton: false,
                 timer: 1500,
-              })
+              });
               Cookies.set("token", data);
               setTimeout(() => {
                 window.location.href = "/";
@@ -78,7 +76,6 @@ const FormsLogin = () => {
                 timer: 1500,
               });
             }
-            
           })
           .catch((error) => {
             console.error("Error:", error);
@@ -120,10 +117,7 @@ const FormsLogin = () => {
               </div>
             </div>
             <div className="h-4 text-warning">
-              <ErrorMessage
-                name="email"
-                component="span"
-              />
+              <ErrorMessage name="email" component="span" />
             </div>
           </div>
           <div className="flex flex-col mb-3">
@@ -148,63 +142,82 @@ const FormsLogin = () => {
                     : ""
                 }`}
               >
-                {passwordText === "password" ? <Image
-                  src={showPasswordWarning}
-                  alt="warningIcon"
-                  className={`${
-                    errors.password && touched.password ? "block" : "hidden"
-                  }`}
-                  onClick={handleShow}
-                />:
-                <Image
-                  src={showPasswordCloseWarning}
-                  alt="warningIcon"
-                  className={`${
-                    errors.password && touched.password ? "block" : "hidden"
-                  }`}
-                  onClick={handleShow}
-                />
-                }
-                {passwordText === "password" ?<Image
-                  src={showPassword}
-                  alt="warningIcon"
-                  className={`${
-                    errors.password && touched.password ? "hidden" : "block"
-                  }`}
-                  onClick={handleShow}
-                />:
-                <Image
-                  src={showPasswordClose}
-                  alt="warningIcon"
-                  className={`${
-                    errors.password && touched.password ? "hidden" : "block"
-                  }`}
-                  onClick={handleShow}
-                />
-                }
+                {passwordText === "password" ? (
+                  <Image
+                    src={showPasswordWarning}
+                    alt="warningIcon"
+                    className={`${
+                      errors.password && touched.password ? "block" : "hidden"
+                    }`}
+                    onClick={handleShow}
+                  />
+                ) : (
+                  <Image
+                    src={showPasswordCloseWarning}
+                    alt="warningIcon"
+                    className={`${
+                      errors.password && touched.password ? "block" : "hidden"
+                    }`}
+                    onClick={handleShow}
+                  />
+                )}
+                {passwordText === "password" ? (
+                  <Image
+                    src={showPassword}
+                    alt="warningIcon"
+                    className={`${
+                      errors.password && touched.password ? "hidden" : "block"
+                    }`}
+                    onClick={handleShow}
+                  />
+                ) : (
+                  <Image
+                    src={showPasswordClose}
+                    alt="warningIcon"
+                    className={`${
+                      errors.password && touched.password ? "hidden" : "block"
+                    }`}
+                    onClick={handleShow}
+                  />
+                )}
               </div>
             </div>
             <div className="h-8 text-warning">
-              <ErrorMessage
-                name="password"
-                component="span"
-              />
+              <ErrorMessage name="password" component="span" />
             </div>
             <a
               href="/auth/register"
-              className=" text-base font-medium m-2 text-center text-textSecondary"
+              className=" underline text-base font-medium m-2 text-center text-indigo-700"
             >
-              Registrieren Sie sich hier
+              Neues Konto erstellen
             </a>
           </div>
 
           <div className="  flex flex-col items-center justify-center  gap-5">
             <ButtonPrimary
-              title="Iniciar con Google" size="lg" color="bg-tertiary"
-            /> 
+              title="Iniciar con Google"
+              size="lg"
+              color="bg-tertiary"
+              onClick="#"
+            />
             <ButtonPrimary
-              title="Iniciar sesión" size="lg" color="bg-secondary"
-            />   
+              title="Iniciar sesión"
+              size="lg"
+              color="bg-secondary"
+              onClick="#"
+            />
+            <ButtonPrimary
+              title="Test dashboard User"
+              size="lg"
+              color="bg-red-400"
+              onClick="/user"
+            />
+            <ButtonPrimary
+              title="Test dashboard Admin"
+              size="lg"
+              color="bg-red-400"
+              onClick="/admin"
+            />
           </div>
         </Form>
       )}

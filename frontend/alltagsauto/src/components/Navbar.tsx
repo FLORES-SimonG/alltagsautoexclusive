@@ -8,7 +8,7 @@ export default function Navbar() {
 
   if (pathname === "/auth/login" || pathname === "/auth/register") return null; 
   return (
-    <nav className="sticky top-0 bg-gray-800 px-8 py-3 flex flex-row justify-center lg:justify-between items-center z-50">
+    <nav className="sticky h-20 top-0 bg-gray-800 px-8 py-3 flex flex-row justify-center lg:justify-between items-center z-50">
       <a href="/">
         <Image src="/logo.svg" alt="logo" width={200} height={200} />
       </a>
@@ -23,10 +23,10 @@ export default function Navbar() {
         </li>
         <li>
           <Link
-            href="/about"
+            href="/contactUs"
             className="text-customWhite hover:text-secondary/95 transition-colors"
           >
-            Über uns
+            Kontakt
           </Link>
         </li>
         <li>
@@ -37,11 +37,24 @@ export default function Navbar() {
             Autos
           </Link>
         </li>
-        {/* <li>
-            <a href="#" className="text-customWhite hover:text-secondary/95 transition-colors">
-              Contact
-            </a>
-          </li> */}
+        <li>
+          <Link
+            href="/termsAndConditions"
+            className="text-customWhite hover:text-secondary/95 transition-colors"
+          >
+            Terms & Conditions  
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/faq"
+            className="text-customWhite hover:text-secondary/95 transition-colors"
+          >
+            FAQ
+          </Link>
+        </li>
+        
+      
       </ul>
 
       <Link href="/auth/login"><button className="text-white hidden lg:flex py-3 px-10 justify-center items-center gap-8 border-white border-2 rounded-lg hover:border-tertiary transition-colors">
